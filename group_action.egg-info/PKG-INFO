@@ -119,9 +119,8 @@ n=4  3 984 orbits
 ## KNOWN BUGS AND LIMITATIONS
 1. The $n=5$ step requires a lot of memory. Let me know if you go through :-)
 2. The group action is concrete and set up to $G=S_n$ and $X=B^{B^n}$ in this version.
-3. The default number of cores could be set up automatically.
-4. The packaging is managed through PyPI, not yet synchronized to GitHub.
-5. The documentation for the library has not been generated yet.
+3. The packaging is managed through PyPI, not yet synchronized to GitHub.
+4. The documentation for the library has not been generated yet.
 
 ## FEEDBACK
 Any comment and/or improvement whether on optimization, packaging, documentation, or on any other appropriate topic is welcome :-)

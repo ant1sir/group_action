@@ -14,12 +14,12 @@ from tqdm import tqdm
 
 sys.set_int_max_str_digits(8192)
 
-def print_arguments_summary(args, parser):
+def print_arguments_summary(args, parser, version):
 	"""
 	Print execution summary
 	"""
 	command_name = sys.argv[0]
-	print(f"Command: {command_name}")
+	print(f"Command: {command_name}\nVersion: {version}")
 	print("Arguments Summary:")
 	for arg, value in vars(args).items():
 		# Find the corresponding action for this argument to get its help text

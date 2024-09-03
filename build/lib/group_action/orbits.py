@@ -1,3 +1,4 @@
+from group_action import __version__, __num_of_cores__
 from group_action.library import *
 
 def main():
@@ -7,8 +8,10 @@ def main():
 	parser = argparse.ArgumentParser(description='Brut force computation of orbits of n-input 1-output Boolean functions under the action of the symmetric group Sn.')
 
 	# Add the arguments
+	# Add the --version flag to the parser
+	parser.add_argument('--version', action='version', version=f'%(prog)s {__version__}')
 	parser.add_argument('--n', type=int, default=2, help='Number of inputs')
-	parser.add_argument('--c', type=int, default=8, help='Number of cores')
+	parser.add_argument('--c', type=int, default=__num_of_cores__, help='Number of cores')
 	parser.add_argument('--v', action='store_true', help='Output every element of each orbit')
 	parser.add_argument('--j', action='store_true', help='Output data.json file')
 
@@ -16,7 +19,7 @@ def main():
 	args = parser.parse_args()
 
 	# Print arguments summary
-	print_arguments_summary(args, parser)
+	print_arguments_summary(args, parser, __version__)
 
 	"""
 	Initialize Default value
