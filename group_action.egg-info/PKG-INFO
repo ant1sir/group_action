@@ -1,9 +1,9 @@
 Metadata-Version: 2.1
 Name: group-action
-Version: 0.1.7
+Version: 0.1.8
 Summary: A Python package for group action.
 Home-page: https://github.com/ant1sir/group_action
-Author: Antoine Sirianni
+Author: ant1sir
 Author-email: antoine@sirianni.ai
 License: UNKNOWN
 Platform: UNKNOWN
@@ -27,7 +27,7 @@ What are the orbits in the action of the symmetric group $S_n$ on the set of n-i
 
 ## DESCRIPTION
 The name of this package is **group_action**.
-The version of this package is **0.1.7**.
+The version of this package is **0.1.8**.
 It contains a library module named **library** and an application named **orbits**.
 
 It computes the orbits in the action of the symmetric group $S_n$ on the set of n-input Boolean functions $X_n=B^{B^n}$.
@@ -83,17 +83,22 @@ Binary data is considered as Big Endian throughout the code.
 
 ## INSTALL
 Run ```pip install group_action```.
-This application orbits is installed automatically.
+
+The application named **orbits** is installed automatically under $HOME/.local/bin under Ubuntu 22.04.
+Make sure your path is updated.
+Check the following [link](https://askubuntu.com/questions/1144231/home-local-bin-not-in-path-for-ubuntu-19-04) for more information. 
+
 You are ready to go :-)
 
 ## USAGE
 ```
-orbits [-h] [--n N] [--c C] [--r] [--v] [--j]
+orbits [-h] [--version] [--n N] [--c C] [--r] [--v] [--j]
 
 Brut force computation of orbits of n-input 1-output Boolean functions under the action of the symmetric group Sn.
 
 options:
   -h, --help  show this help message and exit
+  --version   show program's version number and exit
   --n N       Number of inputs
   --c C       Number of cores
   --v         Output every element of each orbit

@@ -11,7 +11,7 @@ What are the orbits in the action of the symmetric group $S_n$ on the set of n-i
 
 ## DESCRIPTION
 The name of this package is **group_action**.
-The version of this package is **0.1.7**.
+The version of this package is **0.1.8**.
 It contains a library module named **library** and an application named **orbits**.
 
 It computes the orbits in the action of the symmetric group $S_n$ on the set of n-input Boolean functions $X_n=B^{B^n}$.
@@ -67,17 +67,22 @@ Binary data is considered as Big Endian throughout the code.
 
 ## INSTALL
 Run ```pip install group_action```.
-This application orbits is installed automatically.
+
+The application named **orbits** is installed automatically under $HOME/.local/bin under Ubuntu 22.04.
+Make sure your path is updated.
+Check the following [link](https://askubuntu.com/questions/1144231/home-local-bin-not-in-path-for-ubuntu-19-04) for more information. 
+
 You are ready to go :-)
 
 ## USAGE
 ```
-orbits [-h] [--n N] [--c C] [--r] [--v] [--j]
+orbits [-h] [--version] [--n N] [--c C] [--r] [--v] [--j]
 
 Brut force computation of orbits of n-input 1-output Boolean functions under the action of the symmetric group Sn.
 
 options:
   -h, --help  show this help message and exit
+  --version   show program's version number and exit
   --n N       Number of inputs
   --c C       Number of cores
   --v         Output every element of each orbit
@@ -98,9 +103,8 @@ n=4  3 984 orbits
 ## KNOWN BUGS AND LIMITATIONS
 1. The $n=5$ step requires a lot of memory. Let me know if you go through :-)
 2. The group action is concrete and set up to $G=S_n$ and $X=B^{B^n}$ in this version.
-3. The default number of cores could be set up automatically.
-4. The packaging is managed through PyPI, not yet synchronized to GitHub.
-5. The documentation for the library has not been generated yet.
+3. The packaging is managed through PyPI, not yet synchronized to GitHub.
+4. The documentation for the library has not been generated yet.
 
 ## FEEDBACK
 Any comment and/or improvement whether on optimization, packaging, documentation, or on any other appropriate topic is welcome :-)
