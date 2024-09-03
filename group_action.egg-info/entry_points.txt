@@ -1,0 +1,3 @@
+[console_scripts]
+orbits = group_action.orbits:main
+
