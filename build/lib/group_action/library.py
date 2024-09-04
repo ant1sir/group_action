@@ -14,6 +14,8 @@ from tqdm import tqdm
 
 sys.set_int_max_str_digits(8192)
 
+from group_action import __version__
+
 def print_arguments_summary(args, parser, version):
 	"""
 	Print execution summary
