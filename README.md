@@ -11,7 +11,9 @@ What are the orbits in the action of the symmetric group $S_n$ on the set of n-i
 
 ## DESCRIPTION
 The name of this package is **group_action**.
-The version of this package is **0.1.10**.
+
+The version of this package is **0.1.11**.
+
 It contains a library module named **library** and an application named **orbits**.
 
 It computes the orbits in the action of the symmetric group $S_n$ on the set of n-input Boolean functions $X_n=B^{B^n}$.

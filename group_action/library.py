@@ -35,7 +35,7 @@ def print_header():
 """------------------------
 Author: Antoine Sirianni
 Location: Paris, France
-Date: 2024 Aug 28
+Date: 2024 Sep 10
 ------------------------""")
 
 	print(
@@ -64,9 +64,9 @@ SOFTWARE.
 -----------------------------------------------------------------------------""")
 
 def print_footer():
-	print("--------------------------------------------------------------------")
-	print("Copyright (c) 2024 Antoine Sirianni, Paris, France under MIT license")
-	print("--------------------------------------------------------------------")
+	print("--------------------------------------------------")
+	print("Copyright (c) 2024 Antoine Sirianni, Paris, France")
+	print("--------------------------------------------------")
 
 def convert_int_to_bits(i, size, style=0):
 	"""
