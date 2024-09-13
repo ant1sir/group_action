@@ -2,6 +2,8 @@ LICENSE
 README.md
 setup.py
 group_action/__init__.py
+group_action/burnside.py
+group_action/conjugacy_classes.py
 group_action/library.py
 group_action/orbits.py
 group_action.egg-info/PKG-INFO

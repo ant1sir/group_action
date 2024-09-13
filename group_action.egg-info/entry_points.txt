@@ -1,3 +1,5 @@
 [console_scripts]
+burside = group_action.burnside:main
+conjugacy_classes = group_action.conjugacy_classes:main
 orbits = group_action.orbits:main
 
