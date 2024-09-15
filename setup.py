@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name="group_action",
-	version="0.2.11",
+	version="0.2.12",
 	author="ant1sir",
 	author_email="antoine@sirianni.ai",
 	description="A Python package for group action.",
@@ -24,7 +24,7 @@ setup(
 		'console_scripts': [
 			'orbits = group_action.orbits:main',
 			'conjugacy_classes = group_action.conjugacy_classes:main',
-			'burside = group_action.burnside:main',
+			'burnside = group_action.burnside:main',
 		],
 	},
 
