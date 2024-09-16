@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: group-action
-Version: 0.2.13
+Version: 0.2.14
 Summary: A Python package for group action.
 Home-page: https://github.com/ant1sir/group_action
 Author: ant1sir
@@ -28,7 +28,7 @@ What are the orbits in the action of the symmetric group $S_n$ on the set of n-i
 ## DESCRIPTION
 The name of this package is **group_action**.
 
-The version of this package is **0.2.13**.
+The version of this package is **0.2.14**.
 
 It contains a library module named **library** and three applications named **orbits**, **conjugacy_classes**, and **burnside**.
 
@@ -177,11 +177,13 @@ n=4  3 984 orbits
 Any comment and/or improvement whether on optimization, packaging, documentation, or on any other appropriate topic is welcome :-)
 
 ## CONTACT
-You can reach me antoine AT sirianni DOT ai.
+You can reach me by email: antoine AT sirianni DOT ai.
 I'll do my best to provide you with support.
 
+Check [ORConf 2024 presentation video](https://www.youtube.com/watch?v=cpYvwZsMajM) on Open Source Standard Cell Library Design to get to know me.
+
 ## DOCUMENTATION
-Check OR Conf 2024 paper titled "Open Source Standard Cell Library Design" by Antoine Sirianni once published.
+Check [ORConf 2024 presentation slides](https://drive.google.com/file/d/1MqquCYTonRa8ladpjQhkc7wXzL7EGqIk/view) on Open Source Standard Cell Library Design.
 Type ```pydoc -w group_action.library``` to generate the HTML documentation of the library module.
 
 

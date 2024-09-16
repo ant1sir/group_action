@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name="group_action",
-	version="0.2.13",
+	version="0.2.14",
 	author="ant1sir",
 	author_email="antoine@sirianni.ai",
 	description="A Python package for group action.",
