@@ -12,7 +12,7 @@ What are the orbits in the action of the symmetric group $S_n$ on the set of n-i
 ## DESCRIPTION
 The name of this package is **group_action**.
 
-The version of this package is **0.2.14**.
+The version of this package is **0.2.15**.
 
 It contains a library module named **library** and three applications named **orbits**, **conjugacy_classes**, and **burnside**.
 

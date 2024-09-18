@@ -111,6 +111,8 @@ def main():
 	print(f"Number of inputs: {n}")
 	print(f"Burnside's formula: {final_formula}")
 	print(f"Number of orbits: {final_value}")
+
+	print_footer()
 	
 if __name__ == '__main__':
 	main()
