@@ -112,10 +112,6 @@ def main():
 	print(f"Burnside's formula: {final_formula}")
 	print(f"Number of orbits: {final_value}")
 
-	if n==8:
-		if final_value == 2871827610052485009904013737758920847669809829897636746529411152822140928:
-			print("ok")
-
 	print_footer()
 	
 if __name__ == '__main__':
