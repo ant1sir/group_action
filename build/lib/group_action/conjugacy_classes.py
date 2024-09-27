@@ -10,7 +10,7 @@ def conjugation(perm1, perm2):
 	conjugate = [perm1[perm2[inverse[k]]] for k in range(n)]
 	return conjugate
 
-def task(permutation1, chunk, n):
+def titi_task(permutation1, chunk, n):
 	"""
 	Atomic task
 	"""
@@ -18,6 +18,17 @@ def task(permutation1, chunk, n):
 	for permutation2 in chunk:
 		conjugate = conjugation(permutation1, permutation2)
 		partial_edges += [(",".join(map(str,permutation2)), ",".join(map(str,conjugate)))]
+	return partial_edges
+
+def task(transposition, chunk, n):
+	"""
+	Atomic task
+	"""
+	partial_edges = []
+	permutation1 = convert_transposition_to_permutation(transposition, n)
+	for permutation in chunk:
+		conjugate = conjugation(permutation1, permutation)
+		partial_edges += [(",".join(map(str,permutation)), ",".join(map(str,conjugate)))]
 	return partial_edges
 
 def main():
@@ -55,23 +66,29 @@ def main():
 	# json data output
 	json_data_output = args.j
 
+	# Computing transpositions
+	transpositions = generate_transpositions(n)
+
+	# Total number of transpositions
+	transpositions_size = len(transpositions)
+
 	# Computing symmetric group
 	permutations = generate_symmetric_group(n)
-
+	
 	# Total number of permutations
-	size = math.factorial(n)
+	permutations_size = len(permutations)
 
 	# Define the chunk size
 	chunk_size = 2**(math.floor(n/2))
 
 	# Define the number of jobs
-	num_jobs = int(size / chunk_size)
+	num_jobs = transpositions_size * permutations_size // chunk_size
 
 	# Split the list into chunks
 	chunks = chunk_list(permutations, chunk_size)
 
-	with tqdm_joblib(tqdm(desc="Brut force orbit computing", total=len(permutations)*len(chunks))) as progress_bar:
-		results = Parallel(n_jobs=num_cores)(delayed(task)(permutation, chunk, n) for permutation in permutations for chunk in chunks)
+	with tqdm_joblib(tqdm(desc="Brut force orbit computing", total=num_jobs)) as progress_bar:
+		results = Parallel(n_jobs=num_cores)(delayed(task)(transposition, chunk, n) for transposition in transpositions for chunk in chunks)
 
 	# Generating vertices
 	vertices = [",".join(map(str,permutation)) for permutation in permutations]

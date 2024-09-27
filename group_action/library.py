@@ -102,7 +102,28 @@ def generate_symmetric_group(n):
 	"""
 	Generate the symmetric group.
 	"""
-	return generate_permutations([k for k in range(n)])
+	return generate_permutations(range(n))
+
+def generate_transpositions(n):
+	"""
+	Generate transpositions as 2-cycles (expect n(n+1)/2)
+	"""
+	return list(itertools.combinations(range(n), 2))
+
+def convert_transposition_to_permutation(transposition, n):
+	"""
+	Convert 2-cycle to permutation
+	assert i<n, j<n, and i!=j
+	Ex: For n=5, [1, 2] becomes [0,2,1,3,4]
+	"""
+	i, j = transposition
+	if i>=n or j>=n or i==j:
+		raise error("Wrong transposition specification")
+
+	permutation = list(range(n))
+	permutation[i], permutation[j] = j, i	
+
+	return permutation
 
 def apply_permutation(permutation, elements):
 	"""
@@ -294,16 +315,6 @@ def find_connected_components(vertices, edges):
 			components.append(component)
 	
 	return components
-
-def task(permutation, chunk, n):
-	"""
-	Atomic task
-	"""
-	partial_edges = []
-	for function in chunk:
-		new_function = action(permutation, function)
-		partial_edges += [(compute_signature(function,n), compute_signature(new_function,n))]
-	return partial_edges
 
 def chunk_list(data, chunk_size):
 	"""

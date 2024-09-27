@@ -105,12 +105,16 @@ def main():
 		formula += f"{size}.2^{exponent}"
 
 	# finish
-	final_value = int(acc // math.factorial(n))
+	final_value = acc // math.factorial(n)
 	final_formula = "\\frac{1}{"+f"{n}"+"!}(" + formula + ")"
 	
 	print(f"Number of inputs: {n}")
 	print(f"Burnside's formula: {final_formula}")
 	print(f"Number of orbits: {final_value}")
+
+	if n==8:
+		if final_value == 2871827610052485009904013737758920847669809829897636746529411152822140928:
+			print("ok")
 
 	print_footer()
 	
