@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module powerset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>powerset</strong></big></big> (version 0.2.18)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ant1sir/Projects/group_action/group_action/powerset.py">/home/ant1sir/Projects/group_action/group_action/powerset.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="argparse.html">argparse</a><br>
+<a href="contextlib.html">contextlib</a><br>
+</td><td width="25%" valign=top><a href="itertools.html">itertools</a><br>
+<a href="joblib.html">joblib</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-action1"><strong>action1</strong></a>(g, x)</dt><dd><tt>First&nbsp;action<br>
+G,&nbsp;X,&nbsp;g.x<br>
+g&nbsp;is&nbsp;a&nbsp;list&nbsp;representing&nbsp;a&nbsp;2-cycle&nbsp;or&nbsp;g&nbsp;is&nbsp;a&nbsp;0-cycle<br>
+ex:&nbsp;g=[1,2]&nbsp;means&nbsp;g(1)&nbsp;=&nbsp;2,&nbsp;g(2)&nbsp;=&nbsp;1,&nbsp;g(other)&nbsp;=&nbsp;other</tt></dd></dl>
+ <dl><dt><a name="-action2"><strong>action2</strong></a>(g, A)</dt><dd><tt>Second&nbsp;action<br>
+G,&nbsp;P(X),&nbsp;g.A&nbsp;=&nbsp;{g.x,&nbsp;x&nbsp;in&nbsp;A}</tt></dd></dl>
+ <dl><dt><a name="-action3"><strong>action3</strong></a>(g, B)</dt><dd><tt>Third&nbsp;action<br>
+G,&nbsp;P(P(X)),&nbsp;g.B&nbsp;=&nbsp;{g.A,&nbsp;A&nbsp;in&nbsp;B}</tt></dd></dl>
+ <dl><dt><a name="-convert_int"><strong>convert_int</strong></a>(hypergraph, n)</dt></dl>
+ <dl><dt><a name="-hypergraph_to_bool_func"><strong>hypergraph_to_bool_func</strong></a>(hypergraph, n)</dt><dd><tt>Convert&nbsp;a&nbsp;hypergraph&nbsp;to&nbsp;a&nbsp;Boolean&nbsp;function&nbsp;(truth&nbsp;table).<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;hypergraph:&nbsp;Set&nbsp;of&nbsp;hyperedges.&nbsp;Each&nbsp;hyperedge&nbsp;is&nbsp;a&nbsp;subset&nbsp;of&nbsp;{0,&nbsp;1,&nbsp;...,&nbsp;n-1}.<br>
+-&nbsp;n:&nbsp;Number&nbsp;of&nbsp;variables&nbsp;(nodes&nbsp;in&nbsp;the&nbsp;hypergraph)<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;bool_func:&nbsp;List&nbsp;of&nbsp;Boolean&nbsp;outputs&nbsp;for&nbsp;each&nbsp;input&nbsp;combination&nbsp;of&nbsp;n&nbsp;variables&nbsp;(size&nbsp;2^n)</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Compute&nbsp;the&nbsp;orbits&nbsp;generated&nbsp;by&nbsp;the&nbsp;action&nbsp;of&nbsp;Sn&nbsp;on&nbsp;B^B^n.</tt></dd></dl>
+ <dl><dt><a name="-power_set"><strong>power_set</strong></a>(X)</dt><dd><tt>Generate&nbsp;power&nbsp;set&nbsp;of&nbsp;X</tt></dd></dl>
+ <dl><dt><a name="-task"><strong>task</strong></a>(transposition, chunk, n)</dt><dd><tt>Atomic&nbsp;task</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__num_of_cores__</strong> = 12</td></tr></table>
+</body></html>

@@ -52,7 +52,6 @@ def main():
 	json_data_output = args.j
 
 	# Computing symmetric group
-#	permutations = generate_symmetric_group(n)
 	permutations = generate_transpositions(n)
 
 	# Computing functions

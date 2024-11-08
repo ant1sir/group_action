@@ -1,5 +1,9 @@
 [console_scripts]
 burnside = group_action.burnside:main
 conjugacy_classes = group_action.conjugacy_classes:main
+orbit = group_action.orbit:main
+orbit_random = group_action.orbit_random:main
 orbits = group_action.orbits:main
+powerset = group_action.powerset:main
+symmetric_functions = group_action.symmetric_functions:main
 

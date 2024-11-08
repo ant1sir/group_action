@@ -5,7 +5,11 @@ group_action/__init__.py
 group_action/burnside.py
 group_action/conjugacy_classes.py
 group_action/library.py
+group_action/orbit.py
+group_action/orbit_random.py
 group_action/orbits.py
+group_action/powerset.py
+group_action/symmetric_functions.py
 group_action.egg-info/PKG-INFO
 group_action.egg-info/SOURCES.txt
 group_action.egg-info/dependency_links.txt

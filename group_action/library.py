@@ -116,12 +116,12 @@ def convert_transposition_to_permutation(transposition, n):
 	assert i<n, j<n, and i!=j
 	Ex: For n=5, [1, 2] becomes [0,2,1,3,4]
 	"""
-	i, j = transposition
-	if i>=n or j>=n or i==j:
-		raise error("Wrong transposition specification")
-
 	permutation = list(range(n))
-	permutation[i], permutation[j] = j, i	
+	if len(transposition) == 2:
+		i, j = transposition
+		if i>=n or j>=n or i==j:
+			raise error("Wrong transposition specification")
+		permutation[i], permutation[j] = j, i	
 
 	return permutation
 

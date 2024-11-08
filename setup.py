@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name="group_action",
-	version="0.2.17",
+	version="0.2.18",
 	author="ant1sir",
 	author_email="antoine@sirianni.ai",
 	description="A Python package for group action.",
@@ -22,9 +22,13 @@ setup(
 	],
 	entry_points={
 		'console_scripts': [
+			'orbit = group_action.orbit:main',
+			'orbit_random = group_action.orbit_random:main',
 			'orbits = group_action.orbits:main',
 			'conjugacy_classes = group_action.conjugacy_classes:main',
 			'burnside = group_action.burnside:main',
+			'powerset = group_action.powerset:main',
+			'symmetric_functions = group_action.symmetric_functions:main',
 		],
 	},
 
